@@ -25,11 +25,16 @@
   font-style: normal;
 }
 
-/* Fix for sticky header */
 html {
-  scroll-padding-top: 90px; /* Adjust this value if it's too much or too little */
-  scroll-behavior: smooth;   /* This adds a nice smooth scroll effect */
+  box-sizing: border-box; /* This makes box padding easier to manage */
+  scroll-padding-top: 90px; 
+  scroll-behavior: smooth;   
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* General Styles */
 body {
   margin: 0;
@@ -37,6 +42,7 @@ body {
   color: #FFFFFF; /* Default text color is now white */
   background-color: rgb(170, 156, 120); 
   line-height: 1.6;
+  overflow-x: hidden; /* This is the main fix: it prevents horizontal scrolling */
 }
 
 h1, h2, h3 {
@@ -436,4 +442,5 @@ footer-bottom {
 /* Controls space between the blocks stacked vertically */
 #features .content-block {
   margin-bottom: 20px; 
+
 }
