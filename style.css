@@ -1,0 +1,439 @@
+@font-face {
+  font-family: 'Kaniga'; /* CHANGED */
+  src: url('fonts/KaniGa-Regular.ttf') format('truetype'); /* CHANGED */
+  font-weight: 400; /* 400 is 'normal' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaniga-Bold'; /* CHANGED */
+  src: url('fonts/KaniGa-Bold.ttf') format('truetype'); /* CHANGED */
+  font-weight: 700; /* 700 is 'bold' */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CSPraJad';
+  src: url('fonts/CSPraJad-v2.otf') format('opentype');
+  font-weight: 400; /* 400 is 'normal' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CSPraJad-Bold';
+  src: url('fonts/CSPraJad-bold-v2.otf') format('opentype');
+  font-weight: 700; /* 700 is 'bold' */
+  font-style: normal;
+}
+
+/* Fix for sticky header */
+html {
+  scroll-padding-top: 90px; /* Adjust this value if it's too much or too little */
+  scroll-behavior: smooth;   /* This adds a nice smooth scroll effect */
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Kaniga','Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: #FFFFFF; /* Default text color is now white */
+  background-color: rgb(170, 156, 120); 
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Kaniga','Merriweather', 'Suez One', serif;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+
+p {
+  font-family: 'CSPraJad','Merriweather', 'Suez One', serif;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+/* 
+h3 {
+  font-size: 1.8rem;
+  color: rgb(71, 69, 48);
+} */
+
+p {
+  font-size: 1.2rem;
+  color: #FFFFFF; /* This makes the paragraph text white */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.content-section {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.section-centered {
+  text-align: center;
+}
+
+/* .divider-image {
+  max-height: 65px;
+  margin-bottom: 30px;
+  width: 300px;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .divider-image {
+  max-height: 65px;
+  margin-bottom: 30px;
+} */
+
+/* Header / Navbar */
+.navbar {
+  background-color: rgb(112, 113, 76); /* Olive green from site */
+  padding: 2px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-family: 'Kaniga','Merriweather', 'Suez One', serif;
+  font-size: 3rem;
+  /* font-weight: bold; */
+  color: #FFFFFF;
+}
+
+.navbar .main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .main-nav li {
+  margin-left: 60px;
+}
+
+.navbar .main-nav a {
+  font-family: 'CSPraJad','Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.05em; */
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://static.wixstatic.com/media/f19a51_b7823881cabe4e059d9616c62a5312f8~mv2.jpg/v1/fill/w_1512,h_1057,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f19a51_b7823881cabe4e059d9616c62a5312f8~mv2.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.hero-logo {
+  width: 332px;
+  height: 389px;
+  object-fit: contain;
+}
+
+.button {
+  display: inline-block;
+  background-color: rgb(112, 113, 76); /* Olive green */
+  color: #FFFFFF;
+  padding: 8px 50px;
+  font-family: 'CSPraJad','Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(71, 69, 48); /* Darker olive */
+}
+
+/* Grid Layout ("Why Choose Us") */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default for mobile */
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+
+.grid-item .main-image {
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+  display: block;
+}
+
+.grid-item h3 {
+  margin-top: 30px;
+}
+
+/* NEW: Gallery Section */
+/* .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 4px;
+} */
+
+/* Gallery Section */
+.gallery-grid {
+    display: flex;         /* CHANGED: Using flexbox */
+    flex-wrap: wrap;       /* Allows items to wrap to the next line */
+    justify-content: center; /* This will center the rows */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    flex-basis: 300px; /* Each item will be about 300px wide */
+    flex-grow: 1;      /* Items can grow to fill space */
+    max-width: 313px;  /* (980px container / 3) - gap */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 1px;
+}
+
+.social-links a {
+  text-align: center;
+  width: 150px;
+}
+
+.social-links img {
+  width: 94px;
+  height: 94px;
+}
+
+.social-links p {
+  color:#FFFFFF;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(112, 113, 76); /* Olive green */
+  padding: 50px 0;
+  color: #FFFFFF;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-left p strong,
+.footer-right p strong {
+  font-family: 'KaniGa-Bold';  
+  /* font-weight: 1000;*/
+  font-size: 2rem; /*This forces them to use your bold 'Kaniga' font*/
+}
+
+.footer-left p, .footer-right p {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-logo {
+  width: 104px; /* Set a width for the placeholder */
+  height: 106px; /* Set a height for the placeholder */
+  margin-bottom: 20px; /* Adds space between logo and copyright */
+}
+
+footer-bottom {
+  text-align: center;
+  margin-top: 30px; /* Adds space above the copyright */
+  padding-top: 100px; /* Adds a bit of space above the text */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Adds a faint dividing line */
+}
+
+.footer-bottom p {
+  font-size: 1rem; /* Made copyright text slightly smaller */
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Desktop Styles (Media Query) */
+@media (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+      text-align: left;
+  }
+
+  
+  .content-section, .footer-content {
+      text-align: left;
+  }
+  
+  .section-centered {
+    text-align: center;
+  }
+
+  .footer-content {
+      flex-direction: row;
+  }
+
+  h2 {
+      text-align: left;
+  }
+  
+  .section-centered h2 {
+    text-align: center;
+  }
+}
+
+/* Grid for "Why Us" content blocks */
+.content-grid-why-us {
+  display: flex; /* CHANGED: from grid */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* CHANGED: This will center the items */
+  gap: 40px; /* Sets space between all blocks */
+  text-align: left;
+  margin-top: 40px; 
+}
+
+/* --- Our Vision Section Spacing --- */
+
+/* Reduces the padding for the whole section */
+#our-vision.content-section {
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+}
+
+/* Reduces the space below the "Our Vision" heading */
+#our-vision h2 {
+  margin-bottom: 1px;
+}
+
+#our-vision p {
+  margin-top: 1px;
+  margin-bottom: 100px;
+}
+
+/* Reduces the space below the divider image */
+#our-vision .divider-image {
+  margin-bottom: 0 px;
+}
+
+.hero h1 {
+  color: #45442e; /* Hero h1 text is now white */
+  font-weight: 400; /* Not bold */
+  text-shadow: none; /* Removed shadow */
+  font-size: 3.5rem; /* Made the font a bit smaller */
+  margin-top: -20px;  /* Pulls text up closer to the logo */
+}
+
+.hero-logo {
+  width: 332px;
+  height: 332px; /* Made the placeholder shorter */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.hero .button {
+  color: #FFFFFF; /* Hero button text is black */
+  font-weight: 400; /* Not bold */
+  margin-top: 25px; /* Sets a specific space above the button */
+}
+
+#features h2 {
+  margin-bottom: 5px;
+}
+
+#features p {
+  margin-top: 1px;
+}
+
+/* Grid for "Why Us" content blocks */
+.content-grid-why-us {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2px 1px; /* CHANGED: Vertical gap is now 20px, horizontal is 40px */
+  text-align: left;
+  /* margin-top: 40px;  */
+} 
+
+/* --- Features Section Spacing --- */
+#features .content-block h3 {
+  margin-bottom: 10px; /* Sets space below the heading */
+}
+
+#features .content-block p {
+  margin-top: 0; /* Removes space above the paragraph */
+}
+
+/* Controls space between the blocks stacked vertically */
+#features .content-block {
+  margin-bottom: 20px; 
+}
